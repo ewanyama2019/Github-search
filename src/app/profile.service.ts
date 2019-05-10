@@ -20,7 +20,7 @@ export class ProfileService {
   }
 
   getProfileInfomation() {
-    return this.http.get('https://api.github.com/users/' + this.username + '?access_token=5be2bacf98ee90698772aa913d1509f165ff0ee3');
+    return this.http.get('https://api.github.com/users/' + this.username + '?access_token' + this.clientsecret);
       }
   updateProfile(username: string) {
     this.username = username;
