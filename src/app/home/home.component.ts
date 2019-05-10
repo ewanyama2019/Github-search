@@ -17,6 +17,11 @@ export class HomeComponent implements OnInit {
   constructor(private profile: ProfileService) { }
 
   ngOnInit() {
+    this.profile.getProfileInfomation().subscribe(data => {
+      this.gitprofile = data;
+      console.log(this.gitprofile);
+    }
+    );
   }
 
 }
