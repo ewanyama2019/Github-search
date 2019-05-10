@@ -1,12 +1,14 @@
 
-<!-- <form #searchForm="ngForm" (ngSubmit)="findProfile()">
+<!-- <div>
+<form #searchForm="ngForm" (ngSubmit)="findProfile()">
   <div class="input-group mb-3">
     <input type="text" class="form-control Search-form" placeholder="Search for git users" [(ngModel)]="username" name="username" (keyup)="findProfile()">
     <div class="input-group-append">
     <input type="submit" value="Search" class="cta btn btn-danger">
     </div>
   </div>
-</form> -->
+</form>
+</div> -->
 
 
 <div class="container">
@@ -19,7 +21,7 @@
 
     <div class="col-lg-8" >
       <!-- <img [src]="user.images.downsized.url" class="img-fluid"> -->
-      <p>{{gitprofile.login}} </p>
+      <a  href="{{gitprofile.repos_url}}"></a>
     </div>
 
   </div>
