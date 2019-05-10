@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RepositoriesComponent } from './repositories/repositories.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavigationComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    RepositoriesComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
