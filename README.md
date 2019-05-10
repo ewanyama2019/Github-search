@@ -1,27 +1,61 @@
 # GithubSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+#### This is a landing page for a GitHub Search . It serves the purpose of making my coding skills in Angula 7, HTML, CSS, Javascript, Bootstrap and jQuery known to people around the world. This is currently the only version of the website created.
 
-## Development server
+ ### By **ERIC WAFULA WANYAMA**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+This website is a landing page of a fictional restaurant. This has been implemented based on everything learnt from HTML, CSS, Javascript, Bootstrap and jQuery.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup/Installation Requirements
 
-## Build
+1. open your default web browser
+2. internet connection is required 
+3. search ewanyama2019 on github
+4. Click on the active link on the repository Github-search
+5. no other downloads or plug-ins are required 
+6. scroll through the page and enjoy the content
+7. give feedback through the contacts and any bugs experienced
+8. Alternatively you can clone the project onto your local machine to have a sneak peak at the code used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+``` bash
+# Move to the respective directory that the clone will be pasted on
 
-## Running unit tests
+# clone into repository
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+$ git clone https://github.com/ewanyama2019/Github-search.git
 
-## Running end-to-end tests
+# Open using your favorite editor and view the code or just open the index.html on the browser
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Known Bugs
 
-## Further help
+there are currently no known bugs experienced on the website but feedback on bugs encountered during viewing of the page will be highly appreciated and will go a long way into making the website better for the users. The only reason that the website may fail to load is if the Internet connection is slow or disconnected which will require you to troubleshoot your Internet connection
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Technologies Used
+
+Technlogy used during the development of this website is  HTML5, CSS, Boostrap4, JavaScript and JQuery to bring out the display on the webpage.
+
+## Feedback
+
+Incase of any issues or feedback please add using any of below links.
+
+* [Issues](https://github.com/ewanyama2019/Github-search/issues). To submit any issues.
+
+* 
+
+## Support and contact details
+
+ Contact me on +254720531308 or on my github account <https://github.com/ewanyama2019>
+
+### live site link
+
+https://ewanyama2019.github.io/Github-search/
+
+### license
+
+https://opensource.org/licenses/MIT
+
+
+Copyright (c) 2019 Eric Wafula Wanyama
