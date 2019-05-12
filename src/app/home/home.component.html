@@ -30,7 +30,7 @@
               <p><span class="badge badge-success">Public Gists - {{gitprofile.public_gists}}</span></p>
               <p><span class="badge badge-info">Public Repos - {{gitprofile.public_repos}}</span></p>
               <p>
-                <a class="btn btn-secondary" [routerLink]="'/profile'">View GitHub Profile in GitHub</a>
+                <a class="btn btn-secondary" href="{{gitprofile.html_url}}" target="_blank">View GitHub Profile in GitHub</a>
               </p>
             </div>
           </div>
@@ -42,26 +42,25 @@
 
 <!--  Display Repossitiries from Json API call-->
 <div class="">
-  <div class="jumbotron">
+  <div class="jumbotron" id="repos-display">
   <div class=" panel panel-default">
     <div class="panel-heading">
       <h4>Repositories</h4>
     </div>
     <div class="panel-body">
-      <div>
-        <!-- <div class="" *ngFor="let repo of repos"> -->
+      <div class="card">
+        <div class="card-header pt-0">
         <!-- <p>{{repo.name}}</p> -->
 
         <div class="col-sm-12">
           <ul class="list-group">
             <li class="list-group-item" *ngFor="let repo of repos">
-              <p>{{repo.name}} <a href="{{repos.html_url}}" target="_blank" class="badge badge-secondary">view project in GitHub</a>  {{repo.description}}</p>
+              <p><b >{{repo.name}} ..</b> <a href="{{repo.html_url}}" target="_blank" class="badge badge-secondary float-right" >view project in GitHub</a>  {{repo.description}}</p>
             </li>
-
           </ul>
         </div>
 
-      <!-- </div> -->
+      </div>
     </div>
   </div>
 </div>
