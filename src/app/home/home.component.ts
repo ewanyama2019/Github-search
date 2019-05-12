@@ -12,7 +12,7 @@ import { ProfileService } from '../profile.service';
 export class HomeComponent implements OnInit {
 
   gitprofile: any;
-  repos: object;
+  repos: any;
   username: string;
 
   constructor(private profile: ProfileService) { }
