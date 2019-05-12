@@ -48,9 +48,32 @@
 
     </div>
 
+
+
+<!--  Display Repossitiries fron=m Json API call-->
     <div class="row">
-      <!-- <img [src]="user.images.downsized.url" class="img-fluid"> -->
-      <!-- <a routerLink="{{gitprofile.repos_url}}" routerLinkActive="router-link-active" ="" alt="Repositories" > -->
+
+        <div class=" panel panel-default">
+            <div class="panel-heading">
+              <h4>Repositories</h4>
+            </div>
+
+            <div class="panel-body">
+              <div >
+                <div class="row" *ngFor="let repo of repos">
+
+                </div>
+
+
+
+              </div>
+
+            </div>
+
+
+
+          </div>
+
     </div>
 
   </div>

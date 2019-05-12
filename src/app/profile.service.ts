@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 
 
 @Injectable({
-  providedIn: 'root'    //we declare that this service should be created by the root application injector.
+  providedIn: 'root'    // we declare that this service should be created by the root application injector.
 })
 export class ProfileService {
 
@@ -28,7 +28,8 @@ export class ProfileService {
   }
 
   getProfileRepositories() {
-    return this.http.get('https://api.github.com/users/' + this.username + '?repos/access_token' + this.clientsecret);
+    return this.http.get('https://api.github.com/users/' + this.username + '/repos?access_token' + this.clientsecret);
+    map(res => res);
   }
   // findprofile() {
   //   this.profile.updateProfile(this.username);
