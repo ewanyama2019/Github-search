@@ -13,7 +13,8 @@ export class ProfileService {
 
 
   private username: string;
-  private clientsecret = 'f41453364bd60c7dde4977378522d4adacdf7bf1';
+  private clientsecret = 'd6cc08e3d3538c361538764522c05bc476e7b77c';
+  baseUrl: string = 'https://api.github.com/users/' + this.username + '?access_token' + this.clientsecret;
 
   constructor(private http: HttpClient) {
     console.log('Service is now ready');
@@ -31,12 +32,5 @@ export class ProfileService {
     return this.http.get('https://api.github.com/users/' + this.username + '/repos?access_token' + this.clientsecret);
     map(res => res);
   }
-  // findprofile() {
-  //   this.profile.updateProfile(this.username);
-  //   this.profile.getProfileInfomation().subscribe(data =>{
-  //     this.username data;
-  //     console.log(this.username);
+  }
 
-  //   }
-  // }
-}

@@ -14,6 +14,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SearchService } from './search/search.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
 
   ],
   providers: [ProfileService],

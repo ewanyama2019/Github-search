@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../profile.service';
+import { FormControl } from '@angular/forms';
+import { map, filter, debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+
 
 
 
@@ -16,18 +19,25 @@ export class HomeComponent implements OnInit {
   username: string;
 
   constructor(private profile: ProfileService) {
-    this.profile.getProfileRepositories().subscribe(repos => {
-      this.repos = repos;
-      console.log(repos);
-    });
-   }
+    }
 
-  ngOnInit() {
+  searchProfile(){
+    this.profile.updateProfile(this.username);
+
     this.profile.getProfileInfomation().subscribe(gitprofile => {
       this.gitprofile = gitprofile;
       console.log(gitprofile);
     }
     );
+
+    this.profile.getProfileRepositories().subscribe(repos => {
+      this.repos = repos;
+      console.log(repos);
+    });
+
   }
+
+  ngOnInit() {
+    }
 
 }
