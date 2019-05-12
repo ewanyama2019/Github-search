@@ -1,29 +1,56 @@
-
 <div>
-<!-- <form> -->
-  <!-- <div class="input-group mb-3">
-    <input type="text" class="form-control-lg Search-form" placeholder="Search for git users" >
-    <div class="input-group-append">
-    <input type="submit" value="Search" class="cta btn btn-danger">
-    </div>
-  </div> -->
-<!-- </form> -->
+
 </div>
 
 <hr>
 
 
-<div class="container">
-  <div class="rows" *ngIf="gitprofile">
-    <div class="col-lg-4" >
-      <!-- <img [src]="user.images.downsized.url" class="img-fluid"> -->
-      <p> <b>{{gitprofile.login}} </b></p>
-      <img class="img-fluid" src="{{gitprofile.avatar_url}}">
+<div class="">
+  <div class="row" *ngIf="gitprofile">
+    <div class=" panel panel-default">
+      <div class="panel-heading">
+        <b>{{gitprofile.name}}. </b> <small><b>[ {{gitprofile.login}} ] </b></small> <span
+          *ngIf="gitprofile.company">Works at {{gitprofile.company}}</span>
+      </div>
+
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-3">
+            <img class="img-fluid img-responsive" src="{{gitprofile.avatar_url}}" alt="profile Image">
+          </div>
+          <div class="col-sm-5">
+            <ul class="list-group">
+              <li class="list-group-item" *ngIf="gitprofile.bio">{{gitprofile.bio}}</li>
+              <li class="list-group-item" *ngIf="gitprofile.hireable">Available for hire</li>
+              <li class="list-group-item" *ngIf="gitprofile.blog">{{gitprofile.blog}}</li>
+              <li class="list-group-item" *ngIf="gitprofile.email"><a
+                  href="emailto:{{gitprofile.email}}">{{gitprofile.email}}</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <div>
+              <p><span class="badge badge-primary">Following - {{gitprofile.following}}</span></p>
+              <p><span class="badge badge-secondary">Followers - {{gitprofile.followers}}</span></p>
+              <p><span class="badge badge-success">Public Gists - {{gitprofile.public_gists}}</span></p>
+              <p><span class="badge badge-info">Public Repos - {{gitprofile.public_repos}}</span></p>
+
+              <p>
+                <a class="btn btn-secondary" [routerLink]="'/profile'" >View GitHub Profile in GitHub</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+
     </div>
 
-    <div class="col-lg-8" >
+    <div class="row">
       <!-- <img [src]="user.images.downsized.url" class="img-fluid"> -->
-      <p>{{gitprofile.repos_url}}</p>
+      <!-- <a routerLink="{{gitprofile.repos_url}}" routerLinkActive="router-link-active" ="" alt="Repositories" > -->
     </div>
 
   </div>

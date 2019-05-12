@@ -7,20 +7,20 @@ import { ProfileService } from '../profile.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   providers: [ProfileService], //add the prividers to the component
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
 
-  gitprofile: object;
+  gitprofile: any;
   repos: object;
   username: string;
 
   constructor(private profile: ProfileService) { }
 
   ngOnInit() {
-    this.profile.getProfileInfomation().subscribe(data => {
-      this.gitprofile = data;
-      console.log(this.gitprofile);
+    this.profile.getProfileInfomation().subscribe(gitprofile => {
+      this.gitprofile = gitprofile;
+      console.log(gitprofile);
     }
     );
   }
