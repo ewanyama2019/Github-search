@@ -2,18 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root'    //we declare that this service should be created by the root application injector.
 })
 export class ProfileService {
 
 
   private username: string;
-  private clientsecret = '5be2bacf98ee90698772aa913d1509f165ff0ee3';
+  private clientsecret = 'f41453364bd60c7dde4977378522d4adacdf7bf1';
 
   constructor(private http: HttpClient) {
     console.log('Service is now ready');
@@ -26,4 +26,12 @@ export class ProfileService {
   updateProfile(username: string) {
     this.username = username;
   }
+  // findprofile() {
+  //   this.profile.updateProfile(this.username);
+  //   this.profile.getProfileInfomation().subscribe(data =>{
+  //     this.username data;
+  //     console.log(this.username);
+
+  //   }
+  // }
 }

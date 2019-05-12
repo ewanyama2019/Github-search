@@ -1,4 +1,4 @@
-# GithubSearch
+# Github-Search
 
 #### This is a landing page for a GitHub Search . It serves the purpose of making my coding skills in Angula 7, HTML, CSS, Javascript, Bootstrap and jQuery known to people around the world. This is currently the only version of the website created.
 
