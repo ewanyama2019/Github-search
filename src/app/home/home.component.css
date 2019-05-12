@@ -1,3 +1,13 @@
+.jumbotron {
+  margin-top: 0%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+}
+.panel {
+  margin: auto;
+
+}
 
 img {
   border-radius: 3%;
@@ -6,13 +16,13 @@ img {
 }
 .container {
   margin: 0%;
-  justify-content: auto;
 }
 
 .col-sm-4 {
  border: 1px solid slategrey;
  border-radius: 2%;
  margin-right: 0%;
+
 }
 .row {
  max-width: 100%
