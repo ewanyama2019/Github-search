@@ -1,22 +1,17 @@
-<div>
-
-</div>
-
 <hr>
 
 
-<div class="">
+<div class="jumbotron">
   <div class="row" *ngIf="gitprofile">
-    <div class=" panel panel-default">
-      <div class="panel-heading">
-        <b>{{gitprofile.name}}. </b> <small><b>[ {{gitprofile.login}} ] </b></small> <span
-          *ngIf="gitprofile.company">Works at {{gitprofile.company}}</span>
+    <div class="panel panel-default">
+      <div class="panel-heading col-sm-12">
+        <p><b>{{gitprofile.name}}. </b> <small><b>[ {{gitprofile.login}} ] </b></small> <span
+          *ngIf="gitprofile.company">Works at {{gitprofile.company}}</span></p>
       </div>
-
       <div class="panel-body">
         <div class="row">
           <div class="col-sm-3">
-            <img class="img-fluid img-responsive" src="{{gitprofile.avatar_url}}" alt="profile Image">
+            <img class="img-fluid img-responsive " src="{{gitprofile.avatar_url}}" alt="profile Image">
           </div>
           <div class="col-sm-5">
             <ul class="list-group">
@@ -26,6 +21,7 @@
               <li class="list-group-item" *ngIf="gitprofile.email"><a
                   href="emailto:{{gitprofile.email}}">{{gitprofile.email}}</a></li>
             </ul>
+
           </div>
           <div class="col-sm-4">
             <div>
@@ -33,48 +29,41 @@
               <p><span class="badge badge-secondary">Followers - {{gitprofile.followers}}</span></p>
               <p><span class="badge badge-success">Public Gists - {{gitprofile.public_gists}}</span></p>
               <p><span class="badge badge-info">Public Repos - {{gitprofile.public_repos}}</span></p>
-
               <p>
-                <a class="btn btn-secondary" [routerLink]="'/profile'" >View GitHub Profile in GitHub</a>
+                <a class="btn btn-secondary" [routerLink]="'/profile'">View GitHub Profile in GitHub</a>
               </p>
             </div>
-
           </div>
         </div>
-
       </div>
-
-
-
     </div>
-
-
-
-<!--  Display Repossitiries fron=m Json API call-->
-    <div class="row">
-
-        <div class=" panel panel-default">
-            <div class="panel-heading">
-              <h4>Repositories</h4>
-            </div>
-
-            <div class="panel-body">
-              <div >
-                <div class="row" *ngFor="let repo of repos">
-
-                </div>
-
-
-
-              </div>
-
-            </div>
-
-
-
-          </div>
-
-    </div>
-
   </div>
+</div>
+
+<!--  Display Repossitiries from Json API call-->
+<div class="">
+  <div class="jumbotron">
+  <div class=" panel panel-default">
+    <div class="panel-heading">
+      <h4>Repositories</h4>
+    </div>
+    <div class="panel-body">
+      <div>
+        <!-- <div class="" *ngFor="let repo of repos"> -->
+        <!-- <p>{{repo.name}}</p> -->
+
+        <div class="col-sm-12">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let repo of repos">
+              <p>{{repo.name}} <a href="{{repos.html_url}}" target="_blank" class="badge badge-secondary">view project in GitHub</a>  {{repo.description}}</p>
+            </li>
+
+          </ul>
+        </div>
+
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+</div>
 </div>

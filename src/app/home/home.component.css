@@ -1,13 +1,20 @@
 
 img {
-  border-radius: 3%
+  border-radius: 3%;
+  max-inline-size:100%;
 
 }
 .container {
   margin: 0%;
+  justify-content: auto;
 }
 
 .col-sm-4 {
  border: 1px solid slategrey;
- border-radius: 2%
+ border-radius: 2%;
+ margin-right: 0%;
 }
+.row {
+ max-width: 100%
+  }
+
